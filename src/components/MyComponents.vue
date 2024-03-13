@@ -5,5 +5,5 @@
 </script>
 
 <template>
- <h1>MyComponents : {{ msg }}</h1>
+ <p>MyComponents : {{ msg }}</p>
 </template>
