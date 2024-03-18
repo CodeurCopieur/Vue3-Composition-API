@@ -1,26 +1,35 @@
 <script setup>
-  import { ref } from 'vue'
+  import { reactive, ref } from 'vue'
 
   const counter = ref(0);
 
   const increase = () => {
-    counter.value++;
+    counterData.counter++;
   };
   const decrease = () => {
-    counter.value--;
+    counterData.counter--;
   };
+
+  const NameTemplate = ref('Template Component');
+
+  const counterData = reactive({
+    counter: 0,
+    name: 'Template Component',
+  })
 </script>
 
 <template>
  <div class="center">
-  <h1>Counter Component</h1>
+  <h1>ref : {{ NameTemplate }} <br> reactive : {{counterData.name}}</h1>
  <div>
-  <button @click.prevent="decrease()" v-if="counter.value < 0">-</button>
+  <button @click.prevent="decrease()">-</button>
   &nbsp;
-  <span>{{counter}}</span>
+  <span>{{counterData.counter}}</span>
   &nbsp;
   <button @click.prevent="increase()">+</button>
  </div>
+
+  <input type="text" v-model="counterData.name" name="" id="">
  </div>
 </template>
 <style scoped>
