@@ -15,12 +15,12 @@
   const counterData = reactive({
     counter: 0,
     name: 'Template Component',
-  })
+  });
 </script>
 
 <template>
  <div class="center">
-  <h1>ref : {{ NameTemplate }} <br> reactive : {{counterData.name}}</h1>
+  <h2>ref : {{ NameTemplate }} <br> reactive : {{counterData.name}}</h2>
  <div>
   <button @click.prevent="decrease()">-</button>
   &nbsp;
