@@ -4,4 +4,5 @@
    <my-components :msg="'lol'"></my-components>
    <Counter></Counter>
    <TemplateSyntax></TemplateSyntax>
+   <ComputedComponent></ComputedComponent>
 </template>
