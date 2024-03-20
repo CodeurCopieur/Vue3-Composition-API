@@ -1,6 +1,6 @@
 <script setup>
   const dynamicId = 'my-id'
-  const message = '<h1>Bonjour</h1>'
+  const message = '<h2>Bonjour</h2>'
   const objectOfAttrs = {
     id: dynamicId,
     class: 'container'
@@ -16,7 +16,7 @@
 </script>
 
 <template>
-  <h1>Template Component</h1>
+  <h2>Template Component</h2>
  <div :id="dynamicId" :[titleAttr] = "titleValue">Template Code</div>
  <div v-bind="objectOfAttrs">Test objectOfAttrs</div>
  <div v-html="message" @[eventName]="changeTitle()"></div>
