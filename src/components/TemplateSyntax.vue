@@ -8,7 +8,7 @@
 
   const titleAttr = "title";
   const titleValue = "C'est est un titre"
-  const eventName = 'clic';
+  const eventName = 'click';
 
   const changeTitle = ()=> {
     alert('changeTitle')
