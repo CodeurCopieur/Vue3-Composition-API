@@ -10,4 +10,6 @@
    <ComputedComponent></ComputedComponent>
    <hr>
    <ClassComponent class="ClassComponent"></ClassComponent>
+   <hr>
+   <StyleComponent></StyleComponent>
 </template>
