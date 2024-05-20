@@ -7,6 +7,7 @@ import ClassComponent from './components/ClassComponent.vue'
 import ComputedComponent from './components/ComputedComponent.vue'
 import TemplateSyntax from './components/TemplateSyntax.vue'
 import Counter from './components/Counter.vue'
+import ConditionalComponent from './components/ConditionalComponent.vue'
 
 const app = createApp(App)
 app.component('MyComponents', MyComponents)
@@ -15,6 +16,7 @@ app.component('TemplateSyntax', TemplateSyntax)
 app.component('ComputedComponent', ComputedComponent)
 app.component('ClassComponent', ClassComponent)
 app.component('StyleComponent', StyleComponent)
+app.component('ConditionalComponent', ConditionalComponent)
 app.mount('#app')
 
 // const app2 = createApp(App)

@@ -12,4 +12,6 @@
    <ClassComponent class="ClassComponent"></ClassComponent>
    <hr>
    <StyleComponent></StyleComponent>
+   <hr>
+   <ConditionalComponent></ConditionalComponent>
 </template>
