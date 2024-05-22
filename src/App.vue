@@ -14,4 +14,6 @@
    <StyleComponent></StyleComponent>
    <hr>
    <ConditionalComponent></ConditionalComponent>
+   <hr>
+   <ListRendering></ListRendering>
 </template>
