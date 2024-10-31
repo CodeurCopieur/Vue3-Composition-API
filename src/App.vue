@@ -18,4 +18,6 @@
    <ListRendering></ListRendering>
    <hr>
    <EventHandling></EventHandling>
+   <hr>
+   <FormInput></FormInput>
 </template>
