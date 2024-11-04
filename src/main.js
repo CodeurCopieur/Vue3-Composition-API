@@ -11,6 +11,7 @@ import ConditionalComponent from './components/ConditionalComponent.vue'
 import ListRendering from './components/ListRendering.vue'
 import EventHandling from './components/EventHandling.vue'
 import FormInput from './components/FormInput.vue'
+import WatchComponent from './components/WatchComponent.vue'
 
 const app = createApp(App)
 app.component('MyComponents', MyComponents)
@@ -23,6 +24,7 @@ app.component('ConditionalComponent', ConditionalComponent)
 app.component('ListRendering', ListRendering)
 app.component('EventHandling', EventHandling)
 app.component('FormInput', FormInput)
+app.component('WatchComponent', WatchComponent)
 app.mount('#app')
 
 // const app2 = createApp(App)

@@ -20,4 +20,6 @@
    <EventHandling></EventHandling>
    <hr>
    <FormInput></FormInput>
+   <hr>
+   <WatchComponent></WatchComponent>
 </template>
