@@ -24,6 +24,30 @@ import { ref, watch } from 'vue';
     }
   });
 
+  const x = ref(0)
+  const y = ref(0);
+
+  watch(x, (newValue, oldValue) => {
+    console.log('nouvelle valeur x : ' + newValue + ' et ancienne valeur x : ' + oldValue)
+  });
+  watch(y, (newValue, oldValue) => {
+    console.log('nouvelle valeur y : ' + newValue + ' et ancienne valeur y : ' + oldValue)
+  });
+
+  watch([x, y], ([newX, newY]) => {
+    console.log(' valeur x : ' + newX + ' et  valeur y : ' + newY)
+  });
+
+  watch(()=> x.value + y.value, (sum) => {
+    console.log(`le resultat est ${sum}`);
+    
+  })
+
+  watch([x, ()=> y.value], ([newX, newY]) => {
+    console.log(`valeur de x et y is ${newX} et ${newY}`);
+    
+  })
+
 </script>
 
 <template>
@@ -37,6 +61,11 @@ import { ref, watch } from 'vue';
       <p>Reponse : {{ answer }}</p>
       <img :src="responseData.image">
     </div>
+
+    <hr>
+
+    <p>v-model : x - <input type="text" v-model="x"></p>
+    <p>v-model : y - <input type="text" v-model="y"></p>
   </div>
 </template>
 
