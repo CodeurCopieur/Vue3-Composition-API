@@ -1,7 +1,6 @@
 <script setup>
-import { ref, watch } from 'vue';
+  import { ref, reactive, watch } from 'vue';
 
-  
   const question = ref('');
   const answer = ref('Les questions contiennent généralement ?');
   const responseData = ref('')
@@ -27,26 +26,42 @@ import { ref, watch } from 'vue';
   const x = ref(0)
   const y = ref(0);
 
-  watch(x, (newValue, oldValue) => {
-    console.log('nouvelle valeur x : ' + newValue + ' et ancienne valeur x : ' + oldValue)
-  });
+  // watch(x, (newValue, oldValue) => {
+  //   console.log('nouvelle valeur x : ' + newValue + ' et ancienne valeur x : ' + oldValue)
+  // });
+
   watch(y, (newValue, oldValue) => {
     console.log('nouvelle valeur y : ' + newValue + ' et ancienne valeur y : ' + oldValue)
   });
 
-  watch([x, y], ([newX, newY]) => {
-    console.log(' valeur x : ' + newX + ' et  valeur y : ' + newY)
+  // watch([x, y], ([newX, newY]) => {
+  //   console.log(' valeur x : ' + newX + ' et  valeur y : ' + newY)
+  // });
+
+  // watch(()=> x.value + y.value, (sum) => {
+  //   console.log(`le resultat est ${sum}`);
+    
+  // })
+
+  // watch([x, ()=> y.value], ([newX, newY]) => {
+  //   console.log(`valeur de x et y is ${newX} et ${newY}`);
+    
+  // })
+
+  const obj = reactive({count: 0, name: "codwerk"});
+
+  watch(()=> obj.count, (newValue) => {
+    console.log('newValue : ' + newValue)
   });
 
-  watch(()=> x.value + y.value, (sum) => {
-    console.log(`le resultat est ${sum}`);
-    
-  })
+  // watch(obj, (newValue, oldValue) => {
+  //   console.log('newValue & oldValue : ' + newValue.count + ' - ' + oldValue.count )
+  //   console.log('newValue & oldValue : ' + newValue.name + ' - ' + oldValue.name )
+  // });
 
-  watch([x, ()=> y.value], ([newX, newY]) => {
-    console.log(`valeur de x et y is ${newX} et ${newY}`);
-    
-  })
+  watch(()=> obj.count, (newValue, oldValue) => {
+    console.log('count : newValue & oldValue : ' + newValue + ' - ' + oldValue )
+  }, {deep: true});
 
 </script>
 
@@ -64,8 +79,13 @@ import { ref, watch } from 'vue';
 
     <hr>
 
-    <p>v-model : x - <input type="text" v-model="x"></p>
-    <p>v-model : y - <input type="text" v-model="y"></p>
+      <p>v-model : x - <input type="text" v-model="x"></p>
+      <p>v-model : y - <input type="text" v-model="y"></p>
+
+    <hr>
+
+    <div>Count : <input type="text" v-model="obj.count"></div>
+    <div>Name : <input type="text" v-model="obj.name"></div>
   </div>
 </template>
 
