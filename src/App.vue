@@ -22,4 +22,6 @@
    <FormInput></FormInput>
    <hr>
    <WatchComponent></WatchComponent>
+   <hr>
+   <WatchEffectComponent></WatchEffectComponent>
 </template>
