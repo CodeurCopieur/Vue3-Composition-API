@@ -1,3 +1,8 @@
+<script setup>
+   import { ref } from 'vue'
+   const title = ref('Mon titre')
+   const content = ref('Mon contenu')
+</script>
 <template>
    <h1>Vue 3 Composition API</h1>
 
@@ -24,4 +29,6 @@
    <WatchComponent></WatchComponent>
    <hr>
    <WatchEffectComponent></WatchEffectComponent>
+   <hr>
+   <SinglePost :title="title" :content="content"></SinglePost>
 </template>
